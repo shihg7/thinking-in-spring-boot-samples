@@ -29,15 +29,15 @@ public class ExitCodeGeneratorBootstrap {
     }
 
     public static void main(String[] args) {
-//        重构前的实现
-//        new SpringApplicationBuilder(ExitCodeGeneratorBootstrap.class)
-//                .web(false) // 非 Web 应用
-//                .run(args)  // 运行 SpringBoot 应用
-//                .close();   // 关闭应用上下文
+        //        重构前的实现
+        //        new SpringApplicationBuilder(ExitCodeGeneratorBootstrap.class)
+        //                .web(false) // 非 Web 应用
+        //                .run(args)  // 运行 SpringBoot 应用
+        //                .close();   // 关闭应用上下文
 
-//        重构后的实现
-        int exitCode = SpringApplication.exit(new SpringApplicationBuilder(ExitCodeGeneratorBootstrap.class)
-                .web(false) // 非 Web 应用
+        //        重构后的实现
+        int exitCode = SpringApplication.exit(
+            new SpringApplicationBuilder(ExitCodeGeneratorBootstrap.class).web(false) // 非 Web 应用
                 .run(args)  // 运行 SpringBoot 应用
         );
         // 传递退出码到 System#exit(int) 方法

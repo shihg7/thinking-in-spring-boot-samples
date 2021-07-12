@@ -29,5 +29,4 @@ public class SpringBoot10WebApplicationBootstrap implements ServletContextInitia
     public void onStartup(ServletContext servletContext) throws ServletException {
         servletContext.setInitParameter("message", "Hello,World");
     }
-
 }

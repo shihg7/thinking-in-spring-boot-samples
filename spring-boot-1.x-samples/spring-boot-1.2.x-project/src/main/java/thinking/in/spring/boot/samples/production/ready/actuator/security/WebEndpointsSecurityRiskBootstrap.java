@@ -16,9 +16,9 @@ import org.springframework.stereotype.Component;
 public class WebEndpointsSecurityRiskBootstrap {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(WebEndpointsSecurityRiskBootstrap.class)
-                .properties("management.port=8081") // 设置管理端 Web 端口
-                .run(args);
+        new SpringApplicationBuilder(WebEndpointsSecurityRiskBootstrap.class).properties(
+            "management.port=8081") // 设置管理端 Web 端口
+            .run(args);
     }
 
     @Component
